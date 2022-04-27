@@ -4,7 +4,7 @@ For this project, the goal was to create a Weather Dashboard which would display
 
 ## Inital Page
 
-![emptyWeather](/assets/images/emptyWeather.png)
+![emptyWeather](/assets/images/emptyweather.png)
 
 The user is presented with the search by city, and empty stats for the weather. The 5 day cards for the future forecast will not show up if nothing is entered. If a user attempts to press the 'Search' button without entering anything, an alert will yell at them to enter a name.
 
