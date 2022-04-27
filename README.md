@@ -1,5 +1,5 @@
 # Weather Report
-
+:octocate:[WeatherReport]( https://franklynt1.github.io/weather-gen/)
 For this project, the goal was to create a Weather Dashboard which would display the weather for the current day + 5 next days based on user input. This required the OpenWeather API to be called to load the data.
 
 ## Inital Page
