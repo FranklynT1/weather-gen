@@ -1,18 +1,31 @@
 # Weather Report
-[Weather Report]( https://franklynt1.github.io/weather-gen/)
+[Weather Report](https://franklynt1.github.io/weather-gen/)
 
-For this project, the goal was to create a Weather Dashboard which would display the weather for the current day + 5 next days based on user input. This required the OpenWeather API to be called to load the data.
-
+Creating a dash boeard using a weather API, alowing the useer to acces reall time weather report based on the searth of there loction. 
 ## Inital Page
 
 ![emptyWeather](/assets/images/emptyweather.png)
 
-The user is presented with the search by city, and empty stats for the weather. The 5 day cards for the future forecast will not show up if nothing is entered. If a user attempts to press the 'Search' button without entering anything, an alert will yell at them to enter a name.
-
+```
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
 ## Loaded Page
+```
 
 ![WeatherCallExample](/assets/images/WeatherCallExample.png)
 
-When entering a city, the data for the current day is displayed in the big card to the right. This info, unlike the 5 day forecast, also includes the UV index, which changes based on how severe it is (Red for severe, grey for moderate, and green for good). Each search will be listed below search button, where the user will be able to click on each one to revisit their past forecast searches. There is also a 'Clear History' button, where the localStorage is emptied and the page goes back to blank. With the 5 day forecast, there was initially an issue where more than just 5 days would be returned from the API. Upon further examination, it became clear that each day was having numerous JSONs returned for it, all weather stats changing based on time of day. This issue was resolved by placing an if statement right after the for loop, making sure that no single day was repeated twice. The datefield had to be reformatted from the original API, as well as the temperature (given in Kelvin).
-
+```
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+WHEN I view the UV index
+THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
+```
 
